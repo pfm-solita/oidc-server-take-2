@@ -29,8 +29,8 @@ public class ClientSeeder(IServiceProvider serviceProvider) : IHostedService
             {
                 ClientId = "public-client",
                 ClientType = ClientTypes.Public,
-                RedirectUris = { new Uri("http://localhost:5002/signin-oidc") },
-                PostLogoutRedirectUris = { new Uri("http://localhost:5002/signout-callback-oidc") },
+                RedirectUris = { new Uri("https://localhost:5002/signin-oidc") },
+                PostLogoutRedirectUris = { new Uri("https://localhost:5002/signout-callback-oidc") },
                 Permissions =
                 {
                     Permissions.Endpoints.Authorization,

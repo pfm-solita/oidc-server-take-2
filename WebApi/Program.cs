@@ -6,20 +6,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.Authority = "http://localhost:5000";
+        options.Authority = "https://localhost:5000";
         options.Audience = "WebApi";
-        options.RequireHttpsMetadata = false;
     });
 
 builder.Services.AddAuthorization();
 
 builder.Services.AddHttpClient("oidc", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000");
+    client.BaseAddress = new Uri("https://localhost:5000");
 });
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

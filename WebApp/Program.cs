@@ -14,7 +14,7 @@ builder.Services.AddAuthentication(options =>
 .AddCookie()
 .AddOpenIdConnect(options =>
 {
-    options.Authority = "http://localhost:5000";
+    options.Authority = "https://localhost:5000";
     options.ClientId = "public-client";
     options.ResponseType = OpenIdConnectResponseType.Code;
     options.UsePkce = true;
@@ -23,7 +23,6 @@ builder.Services.AddAuthentication(options =>
     options.Scope.Add("profile");
     options.Scope.Add("email");
     options.Scope.Add("api");
-    options.RequireHttpsMetadata = false;
     options.GetClaimsFromUserInfoEndpoint = true;
 });
 
@@ -31,12 +30,13 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddHttpClient("webapi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5001");
+    client.BaseAddress = new Uri("https://localhost:5001");
 });
 
 var app = builder.Build();
 
 app.UseStaticFiles();
+app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

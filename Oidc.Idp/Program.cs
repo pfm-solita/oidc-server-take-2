@@ -60,6 +60,7 @@ builder.Services.AddHostedService<ClientSeeder>();
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

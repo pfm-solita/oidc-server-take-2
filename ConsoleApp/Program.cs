@@ -7,7 +7,7 @@ var httpClient = new HttpClient();
 
 // 1. Call /api/time anonymously
 Console.WriteLine("Fetching current time from WebApi...");
-var timeResponse = await httpClient.GetFromJsonAsync<TimeResponse>("http://localhost:5001/api/time");
+var timeResponse = await httpClient.GetFromJsonAsync<TimeResponse>("https://localhost:5001/api/time");
 Console.WriteLine($"Current time: {timeResponse?.Time}");
 
 // 2. Get access token via client credentials
@@ -20,7 +20,7 @@ var tokenRequest = new FormUrlEncodedContent(new Dictionary<string, string>
     ["scope"] = "api"
 });
 
-var tokenHttpResponse = await httpClient.PostAsync("http://localhost:5000/connect/token", tokenRequest);
+var tokenHttpResponse = await httpClient.PostAsync("https://localhost:5000/connect/token", tokenRequest);
 tokenHttpResponse.EnsureSuccessStatusCode();
 
 var tokenJson = await tokenHttpResponse.Content.ReadAsStringAsync();
@@ -30,7 +30,7 @@ Console.WriteLine("Access token obtained.");
 
 // 3. Call /api/userinfo with access token
 Console.WriteLine("\nFetching user info from WebApi...");
-var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5001/api/userinfo");
+var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:5001/api/userinfo");
 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
 var userInfoResponse = await httpClient.SendAsync(request);
@@ -40,4 +40,3 @@ var userInfoJson = await userInfoResponse.Content.ReadAsStringAsync();
 Console.WriteLine($"User info: {userInfoJson}");
 
 record TimeResponse([property: JsonPropertyName("time")] string Time);
-

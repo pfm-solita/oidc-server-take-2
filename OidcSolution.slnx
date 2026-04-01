@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ConsoleApp/ConsoleApp.csproj" />
+  <Project Path="Oidc.Idp/Oidc.Idp.csproj" />
+  <Project Path="WebApi/WebApi.csproj" />
+  <Project Path="WebApp/WebApp.csproj" />
+</Solution>

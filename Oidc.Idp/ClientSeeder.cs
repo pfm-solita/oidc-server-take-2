@@ -12,6 +12,25 @@ public class ClientSeeder(IServiceProvider serviceProvider) : IHostedService
         var applicationManager = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
         var scopeManager = scope.ServiceProvider.GetRequiredService<IOpenIddictScopeManager>();
 
+        // Register the standard OIDC scopes required by the authorization-code flow.
+        // OpenIddict 7.x validates all requested scopes (except "openid") against the scope
+        // store, so "profile" and "email" must be registered explicitly.
+        if (await scopeManager.FindByNameAsync(Scopes.Profile, cancellationToken) is null)
+        {
+            await scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+            {
+                Name = Scopes.Profile
+            }, cancellationToken);
+        }
+
+        if (await scopeManager.FindByNameAsync(Scopes.Email, cancellationToken) is null)
+        {
+            await scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+            {
+                Name = Scopes.Email
+            }, cancellationToken);
+        }
+
         // Register the "api" scope
         if (await scopeManager.FindByNameAsync("api", cancellationToken) is null)
         {

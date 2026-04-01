@@ -23,5 +23,12 @@ jobs:
       - name: Build
         run: dotnet build OidcSolution.slnx --no-restore --configuration Release
 
-      - name: Test
+      - name: Install Playwright browsers
+        run: pwsh EndToEndTests/bin/Release/net10.0/playwright.ps1 install --with-deps chromium
+
+      - name: Unit and integration tests
         run: dotnet test IntegrationTests/IntegrationTests.csproj --no-build --configuration Release --logger "console;verbosity=normal"
+
+      - name: End-to-end tests
+        run: dotnet test EndToEndTests/EndToEndTests.csproj --no-build --configuration Release --logger "console;verbosity=normal"
+

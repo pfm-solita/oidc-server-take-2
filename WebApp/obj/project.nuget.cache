@@ -1,17 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "/Ld5DAMG1y0=",
+  "dgSpecHash": "vAHcwEtG3fY=",
   "success": true,
   "projectFilePath": "/home/runner/work/oidc-server-take-2/oidc-server-take-2/WebApp/WebApp.csproj",
   "expectedPackageFiles": [
-    "/home/runner/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/10.0.5/microsoft.aspnetcore.authentication.openidconnect.10.0.5.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.abstractions/8.0.1/microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.0.1/microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.logging/8.0.1/microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.identitymodel.tokens/8.0.1/microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.aspnetcore.authentication.openidconnect/10.0.5/microsoft.aspnetcore.authentication.openidconnect.10.0.5.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.abstractions/8.0.1/microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.jsonwebtokens/8.0.1/microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.logging/8.0.1/microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.protocols/8.0.1/microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.protocols.openidconnect/8.0.1/microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.identitymodel.tokens/8.0.1/microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.netcore.app.ref/10.0.5/microsoft.netcore.app.ref.10.0.5.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/10.0.5/microsoft.aspnetcore.app.ref.10.0.5.nupkg.sha512",
+    "/tmp/codeql-scratch-62566cdc2ae1e678/dbs/csharp/working/packages/microsoft.netcore.app.host.linux-x64/10.0.5/microsoft.netcore.app.host.linux-x64.10.0.5.nupkg.sha512"
   ],
   "logs": []
 }

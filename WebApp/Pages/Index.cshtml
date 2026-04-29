@@ -1,0 +1,21 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<!DOCTYPE html>
+<html>
+<head><title>@ViewData["Title"]</title></head>
+<body>
+<h1>Home</h1>
+<p>Current time: <strong>@Model.CurrentTime</strong></p>
+@if (User.Identity?.IsAuthenticated == true)
+{
+    <p><a asp-page="/UserInfo">View User Info</a> | <a asp-page="/Account/Logout">Logout</a></p>
+}
+else
+{
+    <p><a asp-page="/UserInfo">Login and View User Info</a></p>
+}
+</body>
+</html>

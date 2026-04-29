@@ -1,0 +1,14 @@
+@page
+@model UserInfoModel
+@{
+    ViewData["Title"] = "User Info";
+}
+<!DOCTYPE html>
+<html>
+<head><title>@ViewData["Title"]</title></head>
+<body>
+<h1>User Info</h1>
+<pre>@Model.UserInfoJson</pre>
+<p><a asp-page="/Index">Back to Home</a></p>
+</body>
+</html>
